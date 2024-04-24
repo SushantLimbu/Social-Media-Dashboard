@@ -82,9 +82,9 @@ I want to focus more in the aspect such as the gulpfile, gitfiles & attributes a
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - https://social-media-dashboard-indol-three.vercel.app/
+- Frontend Mentor - https://www.frontendmentor.io/profile/SushantLimbu
+- Twitter - https://twitter.com/sushantlimbu_10
 
 ## Acknowledgments
 
