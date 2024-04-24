@@ -53,18 +53,21 @@ Users should be able to:
 ### What I learned
 
 ```html
-![Screenshot 2024-04-24 184610](https://github.com/SushantLimbu/Social-Media-Dashboard/assets/152957532/0d2b08f8-7e48-4a79-aa4a-b8178eeaeb87)
-<h1> Html </h1>
-
+<div class="header__title">
+      <h1>Social Media Dashboard</h1>
+      <span class="header__subtitle">Total Followers: 23,004</span>
+    </div>
 ```
 ```css
-![Screenshot 2024-04-24 184835](https://github.com/SushantLimbu/Social-Media-Dashboard/assets/152957532/83b56ef8-c2f6-4357-ac88-eb5c767d2eb2)
-
+html {
+ font-size: 100%;
+ box-sizing: border-box;
 }
 ```
 ```js
-![Screenshot 2024-04-24 185109](https://github.com/SushantLimbu/Social-Media-Dashboard/assets/152957532/f2e67660-d19d-4855-9477-8733fde56d34)
-
+function setDarkMode() {
+ document.querySelector('body').classList = "dark";
+ localStorage.setItem('colorMode', 'dark');
 }
 ```
 
