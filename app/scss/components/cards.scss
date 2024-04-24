@@ -1,0 +1,129 @@
+@use '../util' as *;
+
+
+.cards {
+ display: grid;
+ gap: rem(30);
+ grid-template-columns: 1fr;
+
+ @include breakpoint(medium) {
+  grid-template-columns: repeat(2, 1fr);
+ }
+
+ @include breakpoint(large) {
+  grid-template-columns: repeat(4, 1fr);
+ }
+}
+
+.card {
+ background: var(--CARD-BG);
+ color: var(--TEXT2-COLOR);
+ text-align: center;
+ padding: rem(25);
+ border-radius: rem(5);
+ position: relative; /* Ensure proper positioning of pseudo-element */
+ overflow: hidden;
+ transition: background 200ms ease-in-out;
+ cursor: pointer;
+
+ &:hover {
+  background-color: var(--HOVER-COLOR);
+ }
+
+ &--facebook {
+ border-top: 4px solid var(--FACEBOOK);
+ }
+
+ &--twitter {
+  border-top: 4px solid var(--TWITTER);
+ }
+
+ &--instagram {
+  padding-top: rem(30);
+  &::before {
+   content: "";
+   position: absolute;
+   top: 0; /* Move pseudo-element up by the border width */
+   left: 0;
+   width: 100%;
+   height: rem(4); /* Height should match the border width */
+   background-image: linear-gradient(to right, var(--INSTAGRAM-START), var(--INSTAGRAM-END));
+ }
+}
+
+ &--youtube {
+  border-top: 4px solid var(--YOUTUBE);
+ }
+
+ &__platform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: rem(28);
+  margin-top: rem(5);
+  height: rem(20);
+ }
+
+ &__subtitle {
+  font-size: rem(14);
+  font-weight: bold;
+ }
+
+ &__icon {
+  margin-right: rem(8);
+ }
+
+ &__username {
+  font-size: rem(12);
+  font-weight: bold;
+ }
+
+ &__followers {
+  margin-bottom: rem(25);
+ }
+
+ &__count {
+  color: var(--TEXT1-COLOR);
+  letter-spacing: rem(-2);
+  margin-bottom: rem(4);
+
+  &--big {
+   font-size: rem(56);
+   font-weight: bold;
+  }
+
+  &--small {
+    font-size: rem(32);
+    font-weight: bold;
+  }
+ }
+
+ &__label {
+  font-size: rem(12);
+  font-weight: 400;
+  color: var(--DARK-TEXT1);
+  text-transform: uppercase;
+  letter-spacing: rem(5);
+  line-height: rem(1);
+ }
+
+ &__change {
+  display: flex;
+  font-size: rem(12);
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+
+  &--up {
+   color: var(--LIMEGREEN);
+  }
+
+  &--down {
+   color: var(--BRIGHTRED);
+  }
+
+  img {
+   margin-right: rem(4);
+  }
+ }
+}
